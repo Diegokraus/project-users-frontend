@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router";
 import axios from "axios";
 import {
   Container,
@@ -15,10 +15,7 @@ import Trash from "../../assets/trash.svg";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
-  const history = useHistory()
-
-  console.log(history)
-
+  const navigate = useNavigate()
 
   useEffect(() => {
     async function fetchUsers(){
@@ -38,7 +35,7 @@ const Users = () => {
   }
 
   function goBackPage(){
-    history.push("/");
+    navigate("/");
   }
 
   return (

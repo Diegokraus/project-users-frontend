@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router";
 import axios from "axios";
 import {
   Container,
@@ -15,7 +15,7 @@ import Arrow from "../../assets/arrow.svg";
 
 const App = () => {
   const [users, setUsers] = useState([]);
-  const history = useHistory();
+  const navigate = useNavigate();
   const inputName = useRef();
   const inputAge = useRef();
 
@@ -27,7 +27,7 @@ const App = () => {
 
     setUsers([...users, newUser])
 
-    history.push('/usuarios');
+    navigate('/usuarios');
   }
 
   return (

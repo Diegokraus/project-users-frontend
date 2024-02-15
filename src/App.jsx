@@ -13,8 +13,6 @@ const App = () => {
 
   function addNewUser(){
     setUsers([...users, {id:Math.random(), name:inputName.current.value, age:inputAge.current.value}])
-
-
   }
 
   function deleteUser(userId){
@@ -22,13 +20,11 @@ const App = () => {
     setUsers(newUsers)
   }
 
-
-
   return (
     <Container>
       <Image alt="logo-imagem" src={People} />
       <ContainerItems>
-        <H1>Olá</H1>
+        <H1>Pessoas</H1>
 
         <InputLabel>Nome</InputLabel>
         <Input ref={inputName} placeholder='Nome' />

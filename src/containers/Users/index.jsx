@@ -3,12 +3,13 @@ import { useNavigate } from "react-router";
 import axios from "axios";
 import {
   Container,
-  H1,
   Image,
-  ContainerItems,
-  Button,
   User,
 } from "./styles";
+
+import Button from "../../components/Button";
+import ContainerItems from "../../components/ContainerItems";
+import H1 from '../../components/Title'
 import Avatar from "../../assets/avatar.svg";
 import Arrow from "../../assets/arrow.svg";
 import Trash from "../../assets/trash.svg";
@@ -56,7 +57,7 @@ const Users = () => {
           ))}
         </ul>
         
-        <Button onClick={goBackPage}>
+        <Button isBack={true} onClick={goBackPage}>
         <img alt="seta" src={Arrow} /> Voltar
         </Button>
       </ContainerItems>

@@ -1,14 +1,14 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router";
 import axios from "axios";
+import H1 from '../../components/Title'
+import ContainerItems from "../../components/ContainerItems";
+import Button from "../../components/Button";
 import {
   Container,
-  H1,
   Image,
-  ContainerItems,
   InputLabel,
   Input,
-  Button,
 } from "./styles";
 import People from "../../assets/people.svg";
 import Arrow from "../../assets/arrow.svg";
